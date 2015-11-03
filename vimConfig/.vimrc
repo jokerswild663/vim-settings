@@ -22,8 +22,8 @@ Plugin 'EasyMotion'
 Plugin 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='lucius'
-map t :bn<CR>
-map <Tab> :bp<CR>
+map t :tabnext<CR>
+map <S-t> :tabprevious<CR>
 
 Plugin 'scrooloose/Syntastic'
 " Now we can turn our filetype functionality back on
