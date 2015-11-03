@@ -3,7 +3,11 @@
 projectDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ ! -f "$HOME/.vimrc" ]; then
-	echo "there is nothing here"
-else
 	cp -v "$projectDir/vimConfig/.vimrc" "$HOME/.vimrc"
+else
+	echo "vim config already in place"
+fi
+
+if [ ! -d "$HOME/.vim/bundle/vundle" ]; then
+	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 fi
